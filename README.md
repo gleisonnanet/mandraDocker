@@ -24,7 +24,7 @@ No momento, temos várias versões diferentes de PHP. Use a versão php apropria
 *Execute o `docker-compose up -d`.
 
 ```shell
-git clone https://github.com/sprintcube/docker-compose-lamp.git
+git clone git@github.com:gleisonnanet/mandraDocker.git
 cd docker-compose-lamp/
 cp sample.env .env
 // modifique sample.env conforme necessário
@@ -165,3 +165,7 @@ Na produção, você deve modificar no mínimo os seguintes assuntos:
 
 * manipulador php: mod_php=> php-fpm
 * proteger usuários mysql com limitações de IP de origem adequadas
+
+
+# sincere thanks to
+    https://github.com/sprintcube/docker-compose-lamp
