@@ -167,5 +167,5 @@ Na produção, você deve modificar no mínimo os seguintes assuntos:
 * proteger usuários mysql com limitações de IP de origem adequadas
 
 
-# sincere thanks to
+# Thanks to
     https://github.com/sprintcube/docker-compose-lamp
