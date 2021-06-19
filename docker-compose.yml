@@ -58,3 +58,21 @@ services:
     image: redis:latest
     ports:
       - "127.0.0.1:${HOST_MACHINE_REDIS_PORT}:6379"
+  angularserver:
+    build: 
+      context: ./bin/angular
+    # entrypoint: ./../build.sh
+    container_name: '${COMPOSE_PROJECT_NAME}-${ANGULAR}'
+    restart: 'always'
+    ports:
+      - "${HOST_MACHINE_UNSECURE_HOST_PORT_ANGULAR}:80"
+    volumes: 
+      # - ./Angular-www/dist/${ANGULAROUT}:/var/www/html    
+      - ./Angular-www:/var/www    
+      - ${VHOSTS_DIR-./config/vhosts}:/etc/apache2/sites-enabled
+      - ${LOG_DIR-./logs/apache2}:/var/log/apache2
+    environment:
+      APACHE_DOCUMENT_ROOT: ${APACHE_DOCUMENT_ROOT-/var/www/html}
+      
+   
+
